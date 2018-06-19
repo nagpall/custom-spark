@@ -182,6 +182,8 @@ class IndexedRowMatrix @Since("1.0.0") (
   @Since("1.0.0")
   def multiply(B: Matrix): IndexedRowMatrix = {
 
+    print("In Patched Multiply")
+
     val n = numCols().toInt
     val k = B.numCols
     require(n == B.numRows, s"Dimension mismatch: $n vs ${B.numRows}")
